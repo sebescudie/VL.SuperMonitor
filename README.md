@@ -4,7 +4,15 @@ A VL lib to do all sorts of things with Renderers and monitors
 
 ## Disclaimer
 
-*The project is still at a research stage and clearly not meant to be used for production!*
+*This project is still at a research stage and clearly **not** meant to be used for production!*
+
+## Installation
+
+Open VL's command-line (Quad Menu/Manage Nugets/Command Line) and type
+
+```
+nuget install VL.SuperMonitor -pre
+```
 
 ## What's inside
 
