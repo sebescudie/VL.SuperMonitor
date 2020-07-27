@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>VL.SuperMonitor</id>
+    <version>1.0.0-alpha</version>
+    <title>VL.SuperMonitor</title>
+    <authors>sebescudie</authors>
+    <owners>sebescudie</owners>
+    <projectUrl>https://github.com/sebescudie/VL.SuperMonitor</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Retrieves informations about connected monitors and handles Renderer windows</summary>
+    <description>This library wraps allanrodriguez' MonitorDetailsReader and builds small useful utils on top of it</description>
+    <tags>vl, vvvv, monitor, screen, multiscreen, multimonitor</tags>
+	<license type="expression">MIT</license>
+    <dependencies>
+        <dependency id="MonitorDetails" version="1.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\*.vl" target="" exclude="" />
+    <file src="..\help\**" target="help\" exclude="" /
+  </files>
+</package>

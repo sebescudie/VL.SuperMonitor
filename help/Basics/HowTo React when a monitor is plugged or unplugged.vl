@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="ANW5AJG41esNTrHAaQ16eX" LanguageVersion="2020.1.8.186" Version="0.128">
+  <NugetDependency Id="Orx2RYCJG6ELFZvUZnyiYn" Location="VL.CoreLib" Version="2020.1.8-0186-g0e02aab4a9" />
+  <Patch Id="JqcGrAF9sOGNh4HWDeEJBk">
+    <Canvas Id="OhrD70RbfswPdOPq5rVKNc" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="DGCuTe5WTdbK9w9NEBKdSo">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="OMrWMA21PiWPHQkmxA0cmn">
+        <Canvas Id="M4PU4jHumhMQDmRlvCZiCD" CanvasType="Group">
+          <Node Bounds="79,200,124,19" Id="LfIy5QOOmlPMrb4CGkmpej">
+            <p:NodeReference LastCategoryFullName="IO.SuperMonitor" LastSymbolSource="VL.SuperMonitor.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="IO" />
+              <CategoryReference Kind="Category" Name="SuperMonitor" />
+              <Choice Kind="ProcessAppFlag" Name="OnMonitorSetupChange" />
+            </p:NodeReference>
+            <Pin Id="VVGYo1X6LIlOYOQ04546Fq" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="FoAShGgjquXQdqO0bS1ZJT" Bounds="226,171,246,98" ShowValueBox="true" isIOBox="true" Value="Each time a monitor is plugged/unplugged from der Computer, this node will spit an Observable containing the monitors when the change occurrs.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="79,329,65,19" Id="DQ0dKq1fV9XLQy1APQc663">
+            <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="HoldLatest" />
+            </p:NodeReference>
+            <Pin Id="TSqdceNQUk0Ps4Q434dy7s" Name="Async Notifications" Kind="InputPin" />
+            <Pin Id="EKrwVsClIm1MzKcL4AQKHJ" Name="Reset" Kind="InputPin" />
+            <Pin Id="OaLso8wA3xGPFcTrt6vONH" Name="Value" Kind="OutputPin" />
+            <Pin Id="McKS4E6LiEGM955yzNDCqA" Name="On Data" Kind="OutputPin" />
+          </Node>
+          <Pad Id="L1ZsDTGado5LZdzx9ld5qJ" Comment="" Bounds="81,386,163,15" ShowValueBox="true" isIOBox="true">
+            <p:Value />
+          </Pad>
+          <Pad Id="BHwqQeFSvrePyrxIc92Fin" Bounds="63,457,383,19" ShowValueBox="true" isIOBox="true" Value="Internally, it simply uses the HardwareChanged node to trigger">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="452,450,98,19" Id="T8fbbx5y8yXLM5HnKuJ18D">
+            <p:NodeReference LastCategoryFullName="IO.SuperMonitor" LastSymbolSource="VL.SuperMonitor.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="GetMonitorDetails" />
+            </p:NodeReference>
+            <Pin Id="NIJTBRwLWK4QZtCE43d17I" Name="Update" Kind="InputPin" />
+            <Pin Id="AcR5lqILUiONbOvT8sz9kT" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="Vd0sSIrAmnOQXllAmRDqEv" Bounds="546,458,35,19" ShowValueBox="true" isIOBox="true" Value=".">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="VqaO3IFxhqJOVWi5jtNpVI" Bounds="63,508,414,78" ShowValueBox="true" isIOBox="true" Value="You could say it's a bit cheating and mostly inconvenient since that even if you unplug your mouse from the computer, the event will fire. To that point, I have not found a way to react only on monitor-related-stuff events ¯\_(ツ)_/¯">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+        </Canvas>
+        <Patch Id="Rftkr1pg5XiL339TIOH1sA" Name="Create" />
+        <Patch Id="OSeglPu2R3fNwYm5asbz2M" Name="Update" />
+        <!--
+
+    ************************  ************************
+
+-->
+        <ProcessDefinition Id="MzIo3TWdlP5NA4F4OnqBKi">
+          <Fragment Id="SORHOHCzQJ5MkGvmtAxS0m" Patch="Rftkr1pg5XiL339TIOH1sA" Enabled="true" />
+          <Fragment Id="GZVqilfnM76NLBdBt9yNKU" Patch="OSeglPu2R3fNwYm5asbz2M" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="IXlFpcHS0WDPcdXCW5n4xL" Ids="VVGYo1X6LIlOYOQ04546Fq,TSqdceNQUk0Ps4Q434dy7s" />
+        <Link Id="HGT78uZrujgOg6oHsACFYC" Ids="OaLso8wA3xGPFcTrt6vONH,L1ZsDTGado5LZdzx9ld5qJ" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="Nye3EGR8O2NM9sj4oO5LDp" Location="VL.Skia" Version="2020.1.8-0186-g0e02aab4a9" />
+  <NugetDependency Id="GgZD635XN6NQdvTaB1ckh1" Location="VL.SuperMonitor" Version="0.0.0.0" />
+</Document>

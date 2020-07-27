@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="THeVIQ0iBS9PYV2eSvJjbW" LanguageVersion="2020.1.8.186" Version="0.128">
+  <NugetDependency Id="MPMZQCXWCBIPMH58ccHnDT" Location="VL.CoreLib" Version="2020.1.8-0186-g0e02aab4a9" />
+  <Patch Id="BTVVRv25rREPs6ECZPFZzL">
+    <Canvas Id="Te5zlrI9QMuL26wH19gHda" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="RsfhQlV5wEhPxOKVSHRpaY">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="TRCRQOhqFLFLgtO9OyTI1W">
+        <Canvas Id="HBYEm0WQkDhL9zdpEUGHtL" CanvasType="Group">
+          <Node Bounds="113,195,98,19" Id="FAvbWhuTM5gN00IEY5S17F">
+            <p:NodeReference LastCategoryFullName="IO.SuperMonitor" LastSymbolSource="VL.SuperMonitor.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="GetMonitorDetails" />
+            </p:NodeReference>
+            <Pin Id="PUgeUhvpCTlNJgMgr8eJDo" Name="Update" Kind="InputPin" />
+            <Pin Id="FD53zZLXz7cMIh6UrHpnpt" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="113,159,54,19" Id="JqAgH29XBVVN5yCHgXLCIY">
+            <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="OnOpen" />
+            </p:NodeReference>
+            <Pin Id="TCe3If7u1GlPYYVXdHf3zh" Name="Simulate" Kind="InputPin" />
+            <Pin Id="C3jZLW1u4ETPAbiIz71dNW" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="101,240,278,124" Id="OEhCScHP87PQcTarq3qq8G">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:NodeReference>
+            <Pin Id="L3nLkdd0PUdONqiLGnCBw4" Name="Break" Kind="OutputPin" />
+            <Patch Id="Hkf6WnReKeXMGwJrHwsyeA" ManuallySortedPins="true">
+              <Patch Id="M2tLtBAOkW5PgOh41zjUFF" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="AUydIO7tQYzNtwqphRkhwH" Name="Update" ManuallySortedPins="true" />
+              <Patch Id="EnbTabUmbqGMMGXcrmoYFg" Name="Dispose" ManuallySortedPins="true" />
+              <Node Bounds="113,275,44,26" Id="TwEyi0piz1eMgz8wuVSHI8">
+                <p:NodeReference LastCategoryFullName="IO.SuperMonitor.Monitor" LastSymbolSource="VL.SuperMonitor.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="ClassType" Name="Monitor" />
+                  <Choice Kind="OperationCallFlag" Name="Edid" />
+                </p:NodeReference>
+                <Pin Id="B8wP47OseyRNmH7qd4kPKc" Name="Input" Kind="StateInputPin" />
+                <Pin Id="HRcRTlLirWFPPPS47J1v4V" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="EsLkr1KXcHjQUITuMoDpQd" Name="Edid" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="152,316,100,26" Id="JTIfIlZW48fNA7rOTKGrzP">
+                <p:NodeReference LastCategoryFullName="IO.SuperMonitor.EDID" LastSymbolSource="VL.SuperMonitor.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="ClassType" Name="EDID" />
+                  <Choice Kind="OperationCallFlag" Name="ManufacturerCode" />
+                </p:NodeReference>
+                <Pin Id="GqZmMtSLHUoLHg6dbBrsOb" Name="Input" Kind="StateInputPin" />
+                <Pin Id="UQEzBfzOFroPSCbtUu81ug" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="UjKsrk4LeecOg0iDu70U8s" Name="Manufacturer Code" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="288,316,77,26" Id="CLpXWeFT4arQD9R9yE8NXM">
+                <p:NodeReference LastCategoryFullName="IO.SuperMonitor.EDID" LastSymbolSource="VL.SuperMonitor.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="SerialNumber" />
+                </p:NodeReference>
+                <Pin Id="UIsZpqmevOzP7qpk1I0O0d" Name="Input" Kind="StateInputPin" />
+                <Pin Id="SNvtZt0kkzZNVNrrLLWVmV" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="OckXc64WtnVLvLz4unib9M" Name="Serial Number" Kind="OutputPin" />
+              </Node>
+            </Patch>
+            <ControlPoint Id="KpFbGkLdAtaNZvIi0Oo6rC" Bounds="115,246" Alignment="Top" />
+            <ControlPoint Id="Q0ezPq6orReLPQVh9r8692" Bounds="249,358" Alignment="Bottom" />
+            <ControlPoint Id="GIqzcKq7fDGOXfIa34yFUE" Bounds="362,358" Alignment="Bottom" />
+          </Node>
+          <Pad Id="FhxQ7fe5TABNUlLt5kpSxc" Comment="" Bounds="249,388,35,49" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="Db2ULbQZd6yP0J3U1AngOr" Comment="" Bounds="362,388,35,49" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="138,633,145,19" Id="CRTaMoWHcjvOnjhliecouk">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Renderer" />
+            </p:NodeReference>
+            <Pin Id="CWuQWrInZa0OMp7tPL2W3y" Name="Bounds" Kind="InputPin" DefaultValue="660, 320, 600, 400">
+              <p:TypeAnnotation LastCategoryFullName="System.Drawing" LastSymbolSource="System.Drawing.dll">
+                <Choice Kind="TypeFlag" Name="Rectangle" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="GTidXK8s2MuPAE3HLEprsn" Name="Input" Kind="InputPin" />
+            <Pin Id="IMF1xxNhiWAN03b8PJFqfz" Name="Color" Kind="InputPin" />
+            <Pin Id="NbY2vMDyw4fNeysXTKbdw9" Name="Clear" Kind="InputPin" />
+            <Pin Id="LKkzJYuwIY8O4ZnpmfbrQM" Name="Space" Kind="InputPin">
+              <p:TypeAnnotation LastCategoryFullName="VL.Skia" LastSymbolSource="VL.Skia.dll">
+                <Choice Kind="TypeFlag" Name="CommonSpace" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="TjX27yuIvixQOMnE7bzR8w" Name="Show Cursor" Kind="InputPin" />
+            <Pin Id="MApzLCvNR74L3yOoYJvLIl" Name="VSync" Kind="InputPin" />
+            <Pin Id="RSIehCsvZKuLSPQzSQv5JI" Name="Enabled" Kind="InputPin" />
+            <Pin Id="QZPvUahgzyRNTSWhyRMU0w" Name="Form" Kind="OutputPin" />
+            <Pin Id="N8T6O9fM3MOLrFH1Gmuuaa" Name="ClientBounds" Kind="OutputPin" />
+            <Pin Id="OPkEekFdL8tLGFYb1BXt1l" Name="Render Time" Kind="OutputPin" />
+          </Node>
+          <Pad Id="HqI50z2ElutNZubKu95Nwi" Comment="Serial Number" Bounds="197,705,35,15" ShowValueBox="true" isIOBox="true" Value="0">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="HVoLG9HNL0VMpo6Fgq6IOm" Comment="Set" Bounds="254,736,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="158,602,105,19" Id="Bl89OGaZU9bP1ZVhn0o4S9">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia.Layers.Text" LastSymbolSource="VL.Skia.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Text" />
+            </p:NodeReference>
+            <Pin Id="ReCtQuNx9RwLYBUBYQfHUK" Name="Position" Kind="InputPin" />
+            <Pin Id="QfCShlnsJjBQI5rXMiEoB7" Name="Size" Kind="InputPin" />
+            <Pin Id="TPz7nS3zroaLIMbCWqqfVg" Name="Anchor" Kind="InputPin" />
+            <Pin Id="PlGJ3ubBiGpLFGMAmdn2ZV" Name="Text" Kind="InputPin" DefaultValue="Куда мне идти?">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="BQtDPCVIp8FLwbRJAEEy7z" Name="Paint" Kind="InputPin" />
+            <Pin Id="NoxjstUKmL3PeSqBu8ZDyo" Name="Enabled" Kind="InputPin" />
+            <Pin Id="HwEfbGeOPpxOUnuxLd93wW" Name="Output" Kind="OutputPin" />
+            <Pin Id="Ht3ljZ60bsSMLh9IqUDVIc" Name="Baseline Position" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="138,775,119,19" Id="Qj8ikb1ArsKN9MU8k3JRYp">
+            <p:NodeReference LastCategoryFullName="IO.SuperMonitor" LastSymbolSource="VL.SuperMonitor.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="AssignToSerialNumber" />
+            </p:NodeReference>
+            <Pin Id="KYSx1K4WFYRPN6oeqtPnuH" Name="Renderer" Kind="InputPin" />
+            <Pin Id="M809brNAdAfMc6Jngp88tp" Name="Serial Number" Kind="InputPin" />
+            <Pin Id="HXmhgEWclRVN9t0XOt2DTX" Name="Set" Kind="InputPin" />
+          </Node>
+          <Pad Id="FcgrF9XMW0uQXDBK4xJvQb" Bounds="277,136,35,27" ShowValueBox="true" isIOBox="true" Value="1.">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">13</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="Ed1wv0V10SyPg85cre95sB" Bounds="311,136,199,59" ShowValueBox="true" isIOBox="true" Value="Just a quick helper so you can see your monitor's serial numbers">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="AS2HdGvd6mdQOOpsk3IPy4" Bounds="138,572,35,27" ShowValueBox="true" isIOBox="true" Value="2.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">13</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="CAMR3IheCs8NIJTuoRceka" Bounds="169,578,120,19" ShowValueBox="true" isIOBox="true" Value="Some content">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="DuUZa0F3JIiNogdiaUhdaU" Bounds="354,698,35,27" ShowValueBox="true" isIOBox="true" Value="3.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">13</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="IScovNFrbgJNqaTVXTYmk4" Bounds="388,703,166,119" ShowValueBox="true" isIOBox="true" Value="Paste the desired serial number here and bang the &quot;Set&quot; pin. The Renderer should gracefuly move to the coresponding monitor.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="EPHGvJdN8NpQLKyDB71PSI" Bounds="577,703,280,118" ShowValueBox="true" isIOBox="true" Value="As you can see, the window still has borders. I experienced some weird behaviors when forcing Maximized and No Borders : the Renderer would always stick to the same screen no matter what serial number you give to the node. This will have to be digged.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+        </Canvas>
+        <Patch Id="OqwCu7QUOfMQU6QAAsWpIH" Name="Create" />
+        <Patch Id="VMkW0wVXHrjOseZYF971Qa" Name="Update" />
+        <!--
+
+    ************************  ************************
+
+-->
+        <ProcessDefinition Id="HvC1AY9AxViO4XtasdxysJ">
+          <Fragment Id="QFWIs4cAfthQS9PEc0vdB7" Patch="OqwCu7QUOfMQU6QAAsWpIH" Enabled="true" />
+          <Fragment Id="LwKttn8SXgWLuiqI6oPnEl" Patch="VMkW0wVXHrjOseZYF971Qa" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="ImS54BbxfqdL6txmTiTB7m" Ids="C3jZLW1u4ETPAbiIz71dNW,PUgeUhvpCTlNJgMgr8eJDo" />
+        <Link Id="AwT8XYQFSOBOKs0RRKTO86" Ids="FD53zZLXz7cMIh6UrHpnpt,KpFbGkLdAtaNZvIi0Oo6rC" />
+        <Link Id="GCFXEUg5mF8LkGuMtjM3Uy" Ids="KpFbGkLdAtaNZvIi0Oo6rC,B8wP47OseyRNmH7qd4kPKc" />
+        <Link Id="JRuxvGcAmF7M1htkOG6Be3" Ids="EsLkr1KXcHjQUITuMoDpQd,GqZmMtSLHUoLHg6dbBrsOb" />
+        <Link Id="RUN8DqRcetyL4ecdyh71xX" Ids="EsLkr1KXcHjQUITuMoDpQd,UIsZpqmevOzP7qpk1I0O0d" />
+        <Link Id="DYPQRXyQPtgQGVjlK4s5wb" Ids="UjKsrk4LeecOg0iDu70U8s,Q0ezPq6orReLPQVh9r8692" />
+        <Link Id="P6syOF9YGypORXI3MxiMr7" Ids="Q0ezPq6orReLPQVh9r8692,FhxQ7fe5TABNUlLt5kpSxc" />
+        <Link Id="Eq5kvPOin5wNdhGRxkxL9O" Ids="OckXc64WtnVLvLz4unib9M,GIqzcKq7fDGOXfIa34yFUE" />
+        <Link Id="Gox4YeiigSYQRitmPPbWXF" Ids="GIqzcKq7fDGOXfIa34yFUE,Db2ULbQZd6yP0J3U1AngOr" />
+        <Link Id="FWnSfdK7CeTOqnbeCjv08d" Ids="QZPvUahgzyRNTSWhyRMU0w,KYSx1K4WFYRPN6oeqtPnuH" />
+        <Link Id="FxOmsxplOToL7QbidTugDv" Ids="HqI50z2ElutNZubKu95Nwi,M809brNAdAfMc6Jngp88tp" />
+        <Link Id="L8yXRodP1WANSwGWSEAlk8" Ids="HwEfbGeOPpxOUnuxLd93wW,GTidXK8s2MuPAE3HLEprsn" />
+        <Link Id="GoUWkSjGaAaM0JWGI4uw1l" Ids="HVoLG9HNL0VMpo6Fgq6IOm,HXmhgEWclRVN9t0XOt2DTX" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="RsTrD77zHFBPgoDhu5Gd6O" Location="VL.Skia" Version="2020.1.8-0186-g0e02aab4a9" />
+  <NugetDependency Id="T9dtKpViIAJP6pvGE6ZGbP" Location="VL.SuperMonitor" Version="0.0.0.0" />
+</Document>

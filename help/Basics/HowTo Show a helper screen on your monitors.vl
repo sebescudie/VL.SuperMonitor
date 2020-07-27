@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="QFmeCIQt6ytPU3oUZC3WcY" LanguageVersion="2020.1.8.186" Version="0.128">
+  <NugetDependency Id="JfRG2HrgyE7NjLOBH1eWUR" Location="VL.CoreLib" Version="2020.1.8-0186-g0e02aab4a9" />
+  <Patch Id="C0wTJsrfcYTOCwDSV1qV7L">
+    <Canvas Id="JrOSVYSuTAGNsxjIflTqRb" DefaultCategory="Main" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="CVVL5WsPWn4LoVNotEBo0g">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="IR0JYK2blxHPOLCte01FKz">
+        <Canvas Id="TyxtXtC6zKeQUY6KuejxEY" CanvasType="Group">
+          <Node Bounds="300,396,81,19" Id="LQfm7d57LFGM5aQ5Ksw3wh">
+            <p:NodeReference LastCategoryFullName="IO.SuperMonitor" LastSymbolSource="VL.SuperMonitor.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="MonitorHelper" />
+            </p:NodeReference>
+            <Pin Id="IN4OCIPslr9Np3tpLTMZKv" Name="Show" Kind="InputPin" />
+          </Node>
+          <Pad Id="EdJVsXeylXrOT18DuOPzOM" Bounds="420,329,288,97" ShowValueBox="true" isIOBox="true" Value="Bang the Show input pin. It should spawn full screen renderers on all of your monitors, displaying some information about them. &#xD;&#xA;&#xD;&#xA;Press Escape to get rid of those windows.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="VSy3OpPseejN60TOc9tsEX" Comment="Show" Bounds="302,336,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+        </Canvas>
+        <Patch Id="MsduXdEsb9OQBxKQb4cCJG" Name="Create" />
+        <Patch Id="BoVWtiOIp5xOb5Jl3LLypw" Name="Update" />
+        <ProcessDefinition Id="KtViCFMSnXRMUpsy4MSoIX">
+          <Fragment Id="VX65Fwq4jt2Lc4zDama3WJ" Patch="MsduXdEsb9OQBxKQb4cCJG" Enabled="true" />
+          <Fragment Id="DY3j1Dwo7ymL9xMcVpvQrf" Patch="BoVWtiOIp5xOb5Jl3LLypw" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="D2qtkvelxhuNw3GPqueSnk" Ids="VSy3OpPseejN60TOc9tsEX,IN4OCIPslr9Np3tpLTMZKv" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="UHCYJzBOTrLMfo1C5r5z54" Location="VL.Skia" Version="2020.1.8-0186-g0e02aab4a9" />
+  <NugetDependency Id="AZnZEpFyOYhNZG3TlcEauP" Location="VL.WinFormsUtils" Version="1.0.9" />
+  <NugetDependency Id="OHto1YKuZatLrCjrKC2fpX" Location="VL.SuperMonitor" Version="0.0.0.0" />
+</Document>
