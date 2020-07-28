@@ -4041,80 +4041,13 @@
         <FullNameCategoryReference ID="Primitive" />
       </p:NodeReference>
       <Patch Id="P1Oi7LuCrrCQcHHjF1kJQM">
-        <Canvas Id="C1GiA22HSjXMG7BGT6r8cF" CanvasType="Group">
-          <Node Bounds="462,406,81,19" Id="T2pyw5Y4PKFOvZ7U0yJLFU">
-            <p:NodeReference LastCategoryFullName="IO.SuperMonitor" LastSymbolSource="VL.SuperMonitor.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="MonitorHelper" />
-            </p:NodeReference>
-            <Pin Id="DRBV4MOIXZ9PbvPSxjI537" Name="Show" Kind="InputPin" />
-          </Node>
-          <Node Bounds="342,280" Id="Rk9atJazGpVL9XDPvO1Xqr">
-            <p:NodeReference LastCategoryFullName="VL.WinFormsUtils" LastSymbolSource="VL.WinFormsUtils.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="NotifyIcon" />
-            </p:NodeReference>
-            <Pin Id="AZoSyFlUGXPNDa6Dq9HXhc" Name="Input" Kind="InputPin" />
-            <Pin Id="JklqupMREPAQBiFGXzHBZj" Name="Force Show Notify Icon" Kind="InputPin" DefaultValue="True">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="QeF4GJEooRwPsbXDmpKCbc" Name="Text" Kind="InputPin" DefaultValue="Monitor Details">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="String" />
-              </p:TypeAnnotation>
-            </Pin>
-            <Pin Id="RRLnc4QhG0dM5krnZIBAfN" Name="Context Menu Items" Kind="InputPin" />
-            <Pin Id="GYUJ6Tkpy9pLIz7TKfO6Y9" Name="Output" Kind="OutputPin" />
-            <Pin Id="Ne7EJ5P66VRPlM4UPxc5d2" Name="On Double Click" Kind="OutputPin" />
-            <Pin Id="CrbQaVl5tRHNREpLDxMsBf" Name="On Context Menu Items Click" Kind="OutputPin" />
-          </Node>
-          <Pad Id="QrwLhE5mqc2MSfE6gtoKQY" Comment="Context Menu Items" Bounds="404,229,35,49" ShowValueBox="true" isIOBox="true">
-            <p:TypeAnnotation LastCategoryFullName="Collections" LastSymbolSource="VL.Collections.vl">
-              <Choice Kind="TypeFlag" Name="Spread" />
-              <p:TypeArguments>
-                <TypeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                  <Choice Kind="TypeFlag" Name="String" />
-                </TypeReference>
-              </p:TypeArguments>
-            </p:TypeAnnotation>
-            <p:Value>
-              <Item>Show Screen Debug</Item>
-              <Item>Exit</Item>
-            </p:Value>
-          </Pad>
-          <Node Bounds="402,321,200,19" Id="IH6nVn8q8QtN3tYe9Ocpvr">
-            <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="OperationCallFlag" Name="Decons" />
-              <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
-            </p:NodeReference>
-            <Pin Id="HhlJyb3j07wODciXOdK3wG" Name="Input" Kind="StateInputPin" />
-            <Pin Id="OE7JG23QM9gPiDTtqQTYiz" Name="Result" Kind="OutputPin" />
-            <Pin Id="LoTVCSiy2hkLJTVRVWccdV" Name="Result 2" Kind="OutputPin" />
-          </Node>
-          <Node Bounds="402,368,65,19" Id="FMv2bZB2NMuMtmWpVx4iCx">
-            <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="HoldLatest" />
-            </p:NodeReference>
-            <Pin Id="Rj0eH56y0HTO5CzhtoV7GG" Name="Async Notifications" Kind="InputPin" />
-            <Pin Id="HDZ4SowdAG8MCY2vB8hcZ5" Name="Reset" Kind="InputPin" />
-            <Pin Id="DpNdcKvFZDbOpqOKCMTDsV" Name="Value" Kind="OutputPin" />
-            <Pin Id="POqMcOFqsqnNgeL7vEcFHt" Name="On Data" Kind="OutputPin" />
-          </Node>
-        </Canvas>
+        <Canvas Id="C1GiA22HSjXMG7BGT6r8cF" CanvasType="Group" />
         <Patch Id="NdWxIi3juYkPVfIBUK4sj7" Name="Create" />
         <Patch Id="LGyld9FJY4sPRVPxnNYHwG" Name="Update" />
         <ProcessDefinition Id="MeuZOtChPrkORQ6c5SAzEV">
           <Fragment Id="BsKlvuPEGs3NQCgStDR1Vw" Patch="NdWxIi3juYkPVfIBUK4sj7" Enabled="true" />
           <Fragment Id="OSqqGE2odoENv1RSYqtD1p" Patch="LGyld9FJY4sPRVPxnNYHwG" Enabled="true" />
         </ProcessDefinition>
-        <Link Id="T6VHrrLoLHfOimDsuRo17H" Ids="QrwLhE5mqc2MSfE6gtoKQY,RRLnc4QhG0dM5krnZIBAfN" />
-        <Link Id="Ticf6T4shALNRxfazVq1MD" Ids="CrbQaVl5tRHNREpLDxMsBf,HhlJyb3j07wODciXOdK3wG" />
-        <Link Id="IMqzmIcHBPcMBua5fHfqnn" Ids="OE7JG23QM9gPiDTtqQTYiz,Rj0eH56y0HTO5CzhtoV7GG" />
-        <Link Id="AGfKgVapaddOY3k2dKGOwU" Ids="POqMcOFqsqnNgeL7vEcFHt,DRBV4MOIXZ9PbvPSxjI537" />
       </Patch>
     </Node>
   </Patch>
